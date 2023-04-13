@@ -1,4 +1,4 @@
-package Entity;
+package lk.ijse.HostelManagementSystem.Entity;
 
 
 import javax.persistence.Entity;

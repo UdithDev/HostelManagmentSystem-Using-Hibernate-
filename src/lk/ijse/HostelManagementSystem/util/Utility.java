@@ -1,4 +1,4 @@
-package util;
+package lk.ijse.HostelManagementSystem.util;
 
 import java.io.IOException;
 import java.util.Properties;

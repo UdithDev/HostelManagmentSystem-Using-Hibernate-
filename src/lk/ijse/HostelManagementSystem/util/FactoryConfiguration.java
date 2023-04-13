@@ -1,6 +1,6 @@
-package util;
+package lk.ijse.HostelManagementSystem.util;
 
-import Entity.Student;
+import lk.ijse.HostelManagementSystem.Entity.Student;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
