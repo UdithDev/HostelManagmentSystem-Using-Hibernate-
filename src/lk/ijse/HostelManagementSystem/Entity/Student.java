@@ -7,7 +7,6 @@ import java.util.Date;
 
 @Entity
 public class Student {
-
     @Id
     private String studentId;
     private String name;
