@@ -50,5 +50,16 @@
          </effect>
       </JFXButton>
       <AnchorPane fx:id="loadFormContext" layoutX="200.0" prefHeight="650.0" prefWidth="780.0" />
+      <JFXButton fx:id="btnAddRoom" buttonType="RAISED" layoutX="55.0" layoutY="149.0" onAction="#btnAddRoomOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #393646;" styleClass="edge-button" stylesheets="@../Styles/style.css" text="Add Room" textFill="#d6d6d6">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Shadow />
+         </effect>
+      </JFXButton>
    </children>
 </AnchorPane>

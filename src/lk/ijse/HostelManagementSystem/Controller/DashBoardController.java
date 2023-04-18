@@ -21,6 +21,7 @@ public class DashBoardController {
     public Label lbLoading;
     public JFXButton btnAddStudent;
     public AnchorPane loadFormContext;
+    public JFXButton btnAddRoom;
 
     public void initialize(){
         Timeline timeline=new Timeline();
@@ -48,6 +49,15 @@ public class DashBoardController {
 
     public void btnAddStudentOnAction(ActionEvent actionEvent) throws IOException {
         URL resource = getClass().getResource("../view/StudentForm.fxml");
+        assert resource!=null;
+        Parent load = FXMLLoader.load(resource);
+        loadFormContext.getChildren().clear();
+        loadFormContext.getChildren().add(load);
+    }
+
+
+    public void btnAddRoomOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("../view/RoomForm.fxml");
         assert resource!=null;
         Parent load = FXMLLoader.load(resource);
         loadFormContext.getChildren().clear();
