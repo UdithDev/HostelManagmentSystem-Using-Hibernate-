@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="650.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.HostelManagementSystem.Controller.StudentFormController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="780.0" layoutY="-6.0" opacity="0.52" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/OIP.jpeg" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtRoomId" layoutX="60.0" layoutY="130.0" prefHeight="25.0" prefWidth="230.0" promptText="Room Id*" />
+      <JFXTextField fx:id="txtKeyMoney" layoutX="60.0" layoutY="270.0" prefHeight="25.0" prefWidth="230.0" promptText="KeyMoney*" />
+      <JFXTextField fx:id="txtQty" layoutX="426.0" layoutY="130.0" prefHeight="25.0" prefWidth="230.0" promptText="Quantity*" />
+      <JFXDatePicker fx:id="btnDatePicker" layoutX="426.0" layoutY="200.0" promptText="Date*" />
+      <MenuButton fx:id="btnRoomType" layoutX="60.0" layoutY="200.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="230.0" text="Room Type*">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Non- AC" />
+          <MenuItem mnemonicParsing="false" text="Non- AC / Food " />
+            <MenuItem mnemonicParsing="false" text=" AC  " />
+            <MenuItem mnemonicParsing="false" text=" AC   / Food" />
+        </items>
+      </MenuButton>
+   </children>
+</AnchorPane>
