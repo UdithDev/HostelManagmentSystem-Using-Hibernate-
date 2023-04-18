@@ -37,12 +37,5 @@ public class StudentFormController {
     public void btnDeleteOnAction(ActionEvent actionEvent) {
     }
 
-    public void btnAddRoomOnAction(ActionEvent actionEvent) {
-    }
 
-    public void btnUpdateRoomOnAction(ActionEvent actionEvent) {
-    }
-
-    public void btnRoomOnAction(ActionEvent actionEvent) {
-    }
 }
