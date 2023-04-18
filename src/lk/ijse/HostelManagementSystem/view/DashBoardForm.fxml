@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="650.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.HostelManagementSystem.Controller.DashBoardController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="980.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/dashB.jpg" />
+         </image>
+      </ImageView>
+      <Separator layoutX="200.0" orientation="VERTICAL" prefHeight="650.0" />
+      <JFXButton fx:id="btnLogOut" layoutX="55.0" layoutY="518.0" onAction="#btnLogOutOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #393646;" styleClass="edge-button" stylesheets="@../Styles/style.css" text="LogOut" textFill="#d6d6d6">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Shadow />
+         </effect>
+      </JFXButton>
+      <AnchorPane layoutX="200.0" prefHeight="100.0" prefWidth="780.0" style="-fx-background-color: #263A29;">
+         <children>
+            <Label fx:id="lbLoading" layoutX="310.0" layoutY="42.0" textFill="WHITE">
+               <font>
+                  <Font name="Bell MT Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnAddStudent" buttonType="RAISED" layoutX="55.0" layoutY="60.0" onAction="#btnAddStudentOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #393646;" styleClass="edge-button" stylesheets="@../Styles/style.css" text="Add Student" textFill="#d6d6d6">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Shadow />
+         </effect>
+      </JFXButton>
+      <AnchorPane fx:id="loadFormContext" layoutX="200.0" prefHeight="650.0" prefWidth="780.0" />
+   </children>
+</AnchorPane>
