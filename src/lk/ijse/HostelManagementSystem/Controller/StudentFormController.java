@@ -2,6 +2,7 @@ package lk.ijse.HostelManagementSystem.Controller;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDatePicker;
+import com.jfoenix.controls.JFXRadioButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.scene.control.MenuButton;
@@ -20,6 +21,12 @@ public class StudentFormController {
     public JFXButton btnAdd;
     public JFXButton btnUpdate;
     public JFXButton btnDelete;
+    public JFXButton btnAddRoom;
+    public JFXButton btnUpdateRoom;
+    public JFXButton btnDeleteRoom;
+    public JFXRadioButton RadioBtnFemale;
+    public JFXRadioButton RadioBtnMale;
+
 
     public void btnAddOnAction(ActionEvent actionEvent) {
     }
@@ -28,5 +35,14 @@ public class StudentFormController {
     }
 
     public void btnDeleteOnAction(ActionEvent actionEvent) {
+    }
+
+    public void btnAddRoomOnAction(ActionEvent actionEvent) {
+    }
+
+    public void btnUpdateRoomOnAction(ActionEvent actionEvent) {
+    }
+
+    public void btnRoomOnAction(ActionEvent actionEvent) {
     }
 }

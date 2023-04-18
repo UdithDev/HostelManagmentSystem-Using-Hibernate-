@@ -13,16 +13,26 @@ public class Student {
     private String address;
     private String contactNo;
     private Date date;
+    private String gender;
 
     public Student() {
     }
 
-    public Student(String studentId, String name, String address, String contactNo, Date date) {
+    public Student(String studentId, String name, String address, String contactNo, Date date,String gender) {
         this.studentId = studentId;
         this.name = name;
         this.address = address;
         this.contactNo = contactNo;
         this.date = date;
+        this.gender= gender;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public String getStudentId() {
@@ -73,6 +83,7 @@ public class Student {
                 ", address='" + address + '\'' +
                 ", contactNo='" + contactNo + '\'' +
                 ", date=" + date +
+                ", gender='" + gender + '\'' +
                 '}';
     }
 }

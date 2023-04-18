@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="650.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.HostelManagementSystem.Controller.StudentFormController">
+<AnchorPane prefHeight="650.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.HostelManagementSystem.Controller.RoomFormController">
    <children>
       <ImageView fitHeight="650.0" fitWidth="780.0" layoutY="-6.0" opacity="0.52" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -27,5 +32,32 @@
             <MenuItem mnemonicParsing="false" text=" AC   / Food" />
         </items>
       </MenuButton>
+      <Separator layoutY="340.0" prefWidth="780.0" />
+      <Separator layoutY="370.0" prefWidth="780.0" />
+      <JFXButton fx:id="btnAddRoom" alignment="CENTER" buttonType="RAISED" layoutX="41.0" layoutY="343.0" onAction="#btnAddRoomOnAction" prefHeight="26.0" prefWidth="96.0" style="-fx-background-color: #00a8ff;" stylesheets="@../Styles/style.css" text="Add New">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <styleClass>
+            <String fx:value="edge-button" />
+            <String fx:value="linear-grad" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdateRoom" alignment="CENTER" buttonType="RAISED" layoutX="175.0" layoutY="343.0" onAction="#btnUpdateRoomOnAction" prefHeight="26.0" prefWidth="69.0" style="-fx-background-color: silver;" styleClass="edge-button" stylesheets="@../Styles/style.css" text="Update ">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDeleteRoom" alignment="CENTER" buttonType="RAISED" layoutX="290.0" layoutY="341.0" onAction="#btnRoomDeleteOnAction" prefHeight="29.0" prefWidth="106.0" style="-fx-background-color: #EA2027;" styleClass="edge-button" stylesheets="@../Styles/style.css" text="Delete" textFill="#000000e7">
+         <font>
+            <Font name="Arial Black" size="13.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>
