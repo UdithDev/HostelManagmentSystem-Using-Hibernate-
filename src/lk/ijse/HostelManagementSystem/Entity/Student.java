@@ -1,89 +1,35 @@
 package lk.ijse.HostelManagementSystem.Entity;
 
+import lombok.*;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Date;
 
-
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 @Entity
 public class Student {
     @Id
+    @Column(nullable = false)
     private String studentId;
+
+    @Column(name = "full_name" ,nullable = false)
     private String name;
+
+    @Column(nullable = false)
     private String address;
+
+    @Column(nullable = false)
     private String contactNo;
-    private Date date;
+
+    @Column(nullable = false)
+    private String dob;
+
+    @Column(nullable = false)
     private String gender;
 
-    public Student() {
-    }
 
-    public Student(String studentId, String name, String address, String contactNo, Date date,String gender) {
-        this.studentId = studentId;
-        this.name = name;
-        this.address = address;
-        this.contactNo = contactNo;
-        this.date = date;
-        this.gender= gender;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public String getStudentId() {
-        return studentId;
-    }
-
-    public void setStudentId(String studentId) {
-        this.studentId = studentId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getContactNo() {
-        return contactNo;
-    }
-
-    public void setContactNo(String contactNo) {
-        this.contactNo = contactNo;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "studentId='" + studentId + '\'' +
-                ", name='" + name + '\'' +
-                ", address='" + address + '\'' +
-                ", contactNo='" + contactNo + '\'' +
-                ", date=" + date +
-                ", gender='" + gender + '\'' +
-                '}';
-    }
 }

@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXDatePicker?>
-<?import com.jfoenix.controls.JFXRadioButton?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import java.lang.String?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="650.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.HostelManagementSystem.Controller.StudentFormController">
    <children>
@@ -33,7 +34,7 @@
             <Font name="Bell MT" size="14.0" />
          </font>
       </JFXTextField>
-      <JFXDatePicker fx:id="btnDatePicker" layoutX="426.0" layoutY="200.0" promptText="Date*" />
+      <JFXDatePicker fx:id="txtDatePicker" layoutX="426.0" layoutY="200.0" promptText="DOB*" />
       <Separator layoutY="340.0" prefWidth="780.0" />
       <Separator layoutY="370.0" prefWidth="780.0" />
       <JFXButton fx:id="btnAdd" alignment="CENTER" buttonType="RAISED" layoutX="48.0" layoutY="343.0" onAction="#btnAddOnAction" prefHeight="26.0" prefWidth="96.0" style="-fx-background-color: #00a8ff;" stylesheets="@../Styles/style.css" text="Add New">
@@ -61,15 +62,16 @@
             <Font name="Arial Black" size="13.0" />
          </font>
       </JFXButton>
-      <JFXRadioButton fx:id="RadioBtnMale" layoutX="426.0" layoutY="289.0" text="Male">
-         <font>
-            <Font name="Bell MT" size="14.0" />
-         </font>
-      </JFXRadioButton>
-      <JFXRadioButton fx:id="RadioBtnFemale" layoutX="563.0" layoutY="289.0" text="Female">
-         <font>
-            <Font name="Bell MT" size="14.0" />
-         </font>
-      </JFXRadioButton>
+      <TableView fx:id="tblStudent" layoutY="379.0" prefHeight="265.0" prefWidth="780.0">
+        <columns>
+          <TableColumn fx:id="colStudentId" prefWidth="85.0" text="Student Id" />
+          <TableColumn fx:id="colName" prefWidth="165.0" text="Full Name" />
+            <TableColumn fx:id="colAddress" prefWidth="166.0" text="Address" />
+            <TableColumn fx:id="colContactNo" prefWidth="127.0" text="Contact No" />
+            <TableColumn fx:id="colDob" prefWidth="117.0" text="Date" />
+            <TableColumn fx:id="colGender" prefWidth="119.0" text="Gender" />
+        </columns>
+      </TableView>
+      <JFXComboBox fx:id="cmbGender" layoutX="426.0" layoutY="271.0" prefHeight="25.0" prefWidth="171.0" promptText="Gender*" />
    </children>
 </AnchorPane>

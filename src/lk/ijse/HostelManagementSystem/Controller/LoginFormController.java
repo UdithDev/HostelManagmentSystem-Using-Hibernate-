@@ -4,6 +4,7 @@ package lk.ijse.HostelManagementSystem.Controller;
 import com.jfoenix.controls.JFXButton;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.PasswordField;
@@ -16,36 +17,38 @@ import lk.ijse.HostelManagementSystem.util.Navigation;
 import lk.ijse.HostelManagementSystem.util.Routes;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class LoginFormController {
+public class LoginFormController implements Initializable {
     public JFXButton btnLogin;
     public TextField txtUserName;
 
     public AnchorPane pane;
-  
+
     public ImageView btnCloseEye;
     public ImageView btnOpenEye;
     public PasswordField txtHidePassword;
     public TextField txtShowPassword;
 
-   String password;
+    String password;
 
-    public  void initialize(){
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
         txtShowPassword.setVisible(false);
         btnOpenEye.setVisible(false);
-
     }
+
+
     public void btnLoginOnAction(ActionEvent actionEvent) throws IOException {
 
-        if(txtUserName.getText().toString().equals("admin") && txtHidePassword.getText().equals("1234") ){
-            Navigation.navigate(Routes.DASHBOARD,pane);
-        }
-
-        else if(txtUserName.getText().isEmpty()){
-            new Alert(Alert.AlertType.WARNING,"Username is required !",
+        if (txtUserName.getText().toString().equals("") && txtHidePassword.getText().equals("")) {
+            Navigation.navigate(Routes.DASHBOARD, pane);
+        } else if (txtUserName.getText().isEmpty()) {
+            new Alert(Alert.AlertType.WARNING, "Username is required !",
                     ButtonType.OK).show();
-        }else if(txtHidePassword.getText().isEmpty()){
-            new Alert(Alert.AlertType.WARNING,"Password is required !",
+        } else if (txtHidePassword.getText().isEmpty()) {
+            new Alert(Alert.AlertType.WARNING, "Password is required !",
                     ButtonType.OK).show();
         }
     }
@@ -56,12 +59,12 @@ public class LoginFormController {
     }
 
     public void HidePasswordOnAction(KeyEvent keyEvent) {
-        password=txtHidePassword.getText();
+        password = txtHidePassword.getText();
         txtShowPassword.setText(password);
     }
 
     public void ShowPasswordOnAction(KeyEvent keyEvent) {
-        password=txtShowPassword.getText();
+        password = txtShowPassword.getText();
         txtHidePassword.setText(password);
     }
 
@@ -79,3 +82,5 @@ public class LoginFormController {
         txtHidePassword.setVisible(true);
     }
 }
+
+

@@ -22,6 +22,7 @@ public class DashBoardController {
     public JFXButton btnAddStudent;
     public AnchorPane loadFormContext;
     public JFXButton btnAddRoom;
+    public JFXButton btnSettings;
 
     public void initialize(){
         Timeline timeline=new Timeline();
@@ -62,5 +63,9 @@ public class DashBoardController {
         Parent load = FXMLLoader.load(resource);
         loadFormContext.getChildren().clear();
         loadFormContext.getChildren().add(load);
+    }
+
+    public void btnSettingsOnAction(ActionEvent actionEvent) {
+
     }
 }
