@@ -2,10 +2,10 @@ package lk.ijse.HostelManagementSystem.Entity;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -16,7 +16,7 @@ public class Student {
     @Column(nullable = false)
     private String studentId;
 
-    @Column(name = "full_name" ,nullable = false)
+    @Column(nullable = false)
     private String name;
 
     @Column(nullable = false)
@@ -24,12 +24,14 @@ public class Student {
 
     @Column(nullable = false)
     private String contactNo;
-
     @Column(nullable = false)
     private String dob;
-
     @Column(nullable = false)
     private String gender;
+
+
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, fetch = FetchType.EAGER )
+    private List<Reservation> reservationList=new ArrayList<>();
 
 
 }

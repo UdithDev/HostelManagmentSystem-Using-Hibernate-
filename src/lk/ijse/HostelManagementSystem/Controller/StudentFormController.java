@@ -9,6 +9,10 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import lk.ijse.HostelManagementSystem.Entity.Student;
+import lk.ijse.HostelManagementSystem.bo.BoFactory;
+import lk.ijse.HostelManagementSystem.bo.custom.StudentBo;
+import lk.ijse.HostelManagementSystem.dto.StudentDTO;
+import org.hibernate.Session;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -36,12 +40,15 @@ public class StudentFormController  implements Initializable {
 
 
 
+    private Session session;
+    private StudentBo studentBo=(StudentBo) BoFactory.getBo(BoFactory.BOTypes.STUDENT);
 
     public void btnAddOnAction(ActionEvent actionEvent) {
         String dob =String.valueOf(txtDatePicker.getValue());
         String gender = cmbGender.getValue().toString();
-        Student student=new Student(txtStudentId.getText(),txtStudentName.getText(),txtStudentAddress.getText(),txtStudentContact.getText()
-        ,dob,gender);
+        StudentDTO studentDTO=new StudentDTO(txtStudentId.getText(),txtStudentName.getText(),txtStudentAddress.getText(),txtStudentContact.getText(),dob,gender);
+
+
         }
 
     public void btnUpdateOnAction(ActionEvent actionEvent) {
