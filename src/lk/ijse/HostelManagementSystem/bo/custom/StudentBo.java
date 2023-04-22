@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface StudentBo extends SuperBo {
     List<StudentDTO> loadAll();
+    boolean saveStudent(StudentDTO studentDTO);
 }
